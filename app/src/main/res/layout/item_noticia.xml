@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="3dp"
+    android:layout_marginStart="@dimen/common_margin_min"
+    android:layout_marginEnd="@dimen/common_margin_min"
+    android:layout_marginTop="@dimen/common_margin_min">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_height_size">
+        <ImageView
+            android:id="@+id/imgPhoto"
+            android:layout_width="@dimen/card_image_size"
+            android:layout_height="@dimen/card_image_size"
+            android:layout_margin="@dimen/margin_min"
+            android:contentDescription="@string/image_description"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvFecha"
+            android:layout_width="@dimen/card_image_size"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_texts"
+            app:layout_constraintTop_toBottomOf="@id/imgPhoto"
+            app:layout_constraintStart_toStartOf="@id/imgPhoto"/>
+
+        <TextView
+            android:id="@+id/tvTitular"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:text="@string/pruebaTitular"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:layout_constraintStart_toEndOf="@id/imgPhoto"
+            app:layout_constraintTop_toTopOf="@id/imgPhoto"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvPreview"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:text="@string/pruebaPreview"
+            android:layout_marginTop="@dimen/margin_texts"
+            android:layout_marginBottom="@dimen/margin_min"
+            android:ellipsize="end"
+            android:maxLines="4"
+            app:layout_constraintStart_toStartOf="@id/tvTitular"
+            app:layout_constraintTop_toBottomOf="@id/tvTitular"
+            app:layout_constraintEnd_toEndOf="@id/tvTitular"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
